@@ -1,0 +1,54 @@
+1. flask
+Función: Es el framework principal que permite crear la aplicación web.
+¿Qué hace?
+Maneja rutas (@app.route)
+Renderiza plantillas HTML (render_template)
+Recibe formularios (request)
+Maneja sesiones (session)
+Retorna respuestas (redirect, jsonify)
+
+2. sqlite3
+Función: Permite conectarse y trabajar con una base de datos SQLite.
+¿Qué hace?
+Crear la base de datos local (eco.db)
+Ejecutar queries SQL (insertar usuarios, retos, puntos, etc.)
+
+3. werkzeug.security
+Función: Protege las contraseñas con hashing.
+¿Qué hace?
+generate_password_hash(): encripta la contraseña antes de guardarla.
+check_password_hash(): compara una contraseña escrita con la guardada.
+
+4. os
+Función: Permite trabajar con rutas de archivos del sistema.
+¿Qué hace?
+os.path.join, os.path.dirname: asegura que la ruta a la base de datos funcione en cualquier sistema operativo (Windows, Linux, Mac).
+
+5. json
+Función: Maneja datos en formato JSON.
+¿Qué hace?
+Se usa indirectamente en funciones como jsonify() para enviar respuestas a peticiones AJAX.
+
+6. datetime
+Función: Permite trabajar con fechas y horas.
+¿Qué hace?
+Registrar la fecha en que se crean usuarios, retos, medallas, etc.
+Comparar fechas (por ejemplo, si ya completaste un reto hoy).
+
+7. g (de flask)
+Función: Es un objeto global temporal que guarda datos por cada petición.
+¿Qué hace?
+Guarda la conexión a la base de datos para evitar abrirla varias veces.
+
+
+Otras funciones importantes pero no son librerías externas:
+
+–render_template(): Carga archivos .html desde tu carpeta templates/.
+
+–flash(): Envía mensajes entre vistas (por ejemplo: "registro exitoso").
+
+–session: Guarda datos del usuario logueado.
+
+–redirect() y url_for(): Redirigen al usuario entre rutas.
+
+–jsonify(): Devuelve respuestas JSON para peticiones JavaScript (AJAX).
